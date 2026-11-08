@@ -1,0 +1,25 @@
+[package]
+name = "pdf-print-colors"
+version = "0.2.0"
+edition = "2024"
+rust-version = "1.89"
+description = "Print-ready colour for PDFs: black ink only (pdf-to-black-ink) or CMYK FOGRA39 (pdf-to-cmyk)"
+license = "MIT"
+repository = "https://github.com/japbcoelho/pdf-print-colors"
+readme = "README.md"
+keywords = ["pdf", "cmyk", "prepress", "ghostscript", "print"]
+categories = ["command-line-utilities", "graphics"]
+
+[[bin]]
+name = "pdf-to-black-ink"
+path = "src/bin/pdf-to-black-ink.rs"
+
+[[bin]]
+name = "pdf-to-cmyk"
+path = "src/bin/pdf-to-cmyk.rs"
+
+[dependencies]
+anyhow = "1.0.104"
+flate2 = "1.1.9"
+lopdf = "0.46"
+tempfile = "3.27.0"
